@@ -46,15 +46,15 @@ IS_PRIVATE = is_enabled(
     os.environ.get("IS_PRIVATE", "False"), "False"
 )  # true for private use and restricting users
 SOURCE_CODE = os.environ.get(
-    "SOURCE_CODE", "https://github.com/kevinnadar22/URL-Shortener-V2"
+    "SOURCE_CODE", "https://github.com/maullikpatell/URL-Shortener-V2"
 )  # for upstream repo
 # image when someone hit /start
-WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "")
+WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg")
 LINK_BYPASS = is_enabled(
     (os.environ.get("LINK_BYPASS", "False")), False
 )  # if true, urls will be bypassed
 # your shortener site domain
-BASE_SITE = os.environ.get("BASE_SITE", "droplink.co")
+BASE_SITE = os.environ.get("BASE_SITE", "dtglinks.in")
 
 # For Admin use
 CHANNELS = is_enabled((os.environ.get("CHANNELS", "True")), True)
