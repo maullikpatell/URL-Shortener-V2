@@ -23,7 +23,6 @@ class Database:
                 "bot": helpers.temp.BOT_USERNAME,
                 "posts": 0,
                 "links": 0,
-                "mdisk_links": 0,
                 "shortener_links": 0,
             }
         )
