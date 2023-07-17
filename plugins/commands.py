@@ -21,7 +21,6 @@ from utils import extract_link, get_me_button, get_size
 logger = logging.getLogger(__name__)
 
 user_commands = [
-    "mdisk_api",
     "shortener_api",
     "header",
     "footer",
@@ -31,15 +30,7 @@ user_commands = [
     "me",
 ]
 avl_web = [
-    "droplink.co",
-    "gplinks.in",
-    "tnlink.in",
-    "za.gl",
-    "du-link.in",
-    "viplink.in",
-    "shorturllink.in",
-    "shareus.in",
-    "earnspace.in",
+    "dtglinks.in",
 ]
 
 avl_web1 = "".join(f"- {i}\n" for i in avl_web)
@@ -168,7 +159,6 @@ async def stats_handler(c: Client, m: Message):
 **- Total Users:** `{total_users}`
 **- Total Posts Sent:** `{link_stats['posts']}`
 **- Total Links Shortened:** `{link_stats['links']}`
-**- Total Mdisk Links Shortened:** `{link_stats['mdisk_links']}`
 **- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
 **- Used Storage:** `{size}`
 **- Total Free Storage:** `{free}`
@@ -192,18 +182,6 @@ async def log_file(bot, message):
         await message.reply(str(e))
 
 
-@Client.on_message(filters.command("mdisk_api") & filters.private)
-@private_use
-async def mdisk_api_handler(bot, message: Message):
-    user_id = message.from_user.id
-    user = await get_user(user_id)
-    cmd = message.command
-    if len(cmd) == 1:
-        return await message.reply(MDISK_API_MESSAGE.format(user["mdisk_api"]))
-    elif len(cmd) == 2:
-        api = cmd[1].strip()
-        await update_user_info(user_id, {"mdisk_api": api})
-        await message.reply(f"Mdisk API updated successfully to {api}")
 
 
 @Client.on_message(filters.command("shortener_api") & filters.private)
@@ -346,11 +324,8 @@ async def me_handler(bot, m: Message):
 
     user_id = m.from_user.id
     user = await get_user(user_id)
-    res = USER_ABOUT_MESSAGE.format(
-        base_site=user["base_site"],
-        method=user["method"],
+    res = USER_ABOUT_MESSAGE.format(,
         shortener_api=user["shortener_api"],
-        mdisk_api=user["mdisk_api"],
         username=user["username"],
         header_text=user["header_text"].replace(r"\n", "\n")
         if user["header_text"]
@@ -513,10 +488,7 @@ async def get_user_info_handler(c: Client, m: Message):
         if not user:
             return await m.reply_text("User doesn't exist")
         res = USER_ABOUT_MESSAGE.format(
-            base_site=user["base_site"],
-            method=user["method"],
             shortener_api="This is something secret",
-            mdisk_api="This is something secret",
             username=user["username"],
             header_text=user["header_text"].replace("\n", "\n")
             if user["header_text"]
