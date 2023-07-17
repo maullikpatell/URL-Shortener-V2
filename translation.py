@@ -48,9 +48,8 @@ ABOUT_TEXT = """
     
 `📝 Language:` [Python 3](https://www.python.org/)
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
-`📢 Support:` [Talk Bot](https://t.me/ask_admin001)
-`🌐 Source Code:` [GitHub](https://github.com/kevinnadar22/URL-Shortener-V2/)
+`👨‍💻 Developer:` [Dev](t.me/dtg_bots)
+`📢 Support:` [Channel](https://t.me/dtg_bots)
 """
 
 
@@ -91,7 +90,6 @@ Here is a list of the channels:
 HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
             InlineKeyboardButton("Batch", callback_data="cbatch_command"),
         ],
         [
@@ -123,7 +121,6 @@ START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
             InlineKeyboardButton("About", callback_data="about_command"),
         ],
         [
-            InlineKeyboardButton("Method", callback_data="method_command"),
             InlineKeyboardButton("Close", callback_data="delete"),
         ],
     ]
@@ -133,12 +130,8 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "MDLINK", callback_data="change_method#mdlink"
-            ),
-            InlineKeyboardButton(
                 "Shortener", callback_data="change_method#shortener"
-            ),
-            InlineKeyboardButton("Mdisk", callback_data="change_method#mdisk"),
+            ),           
         ],
         [
             InlineKeyboardButton("Back", callback_data="help_command"),
@@ -154,13 +147,7 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🌐 Shortener website: {base_site}
-
-- 🧰 Method: {method}
-
 - 🔌 {base_site} API: {shortener_api}
-
-- 💾 Mdisk API: {mdisk_api}
 
 - 📎 Username: @{username}
 
@@ -187,7 +174,7 @@ Current Mdisk API: `{}`"""
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
 `/shortener_api [api]`
             
-Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
+Ex: `/shortener_api 9e6082cd457037f01be6631e803c60a1bab73a73`
 
 Current Website: {base_site}
 
@@ -232,7 +219,7 @@ This image will be automatically replaced with other images in the post
 
 To remove custom image, `/banner_image remove`
 
-Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
+Eg: `/banner_image https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg`"""
 
 INCLUDE_DOMAIN_TEXT = """
 Use this option if you want to short only links from the following domains list.
