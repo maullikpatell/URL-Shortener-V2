@@ -126,19 +126,6 @@ START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     ]
 )
 
-METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(
-                "Shortener", callback_data="change_method#shortener"
-            ),           
-        ],
-        [
-            InlineKeyboardButton("Back", callback_data="help_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
-        ],
-    ]
-)
 
 BACK_REPLY_MARKUP = InlineKeyboardMarkup(
     [[InlineKeyboardButton("Back", callback_data="help_command")]]
