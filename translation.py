@@ -53,20 +53,6 @@ ABOUT_TEXT = """
 """
 
 
-METHOD_MESSAGE = """
-Current Method: {method}
-    
-Methods Available:
-
-> `mdlink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
-
-> `shortener` - Short all the links of the post to {shortener} link directly.
-
-> `mdisk` - Save all the links of the post to your Mdisk account.
-    
-To change method, choose it from the following options:
-"""
-
 CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
 
 This feature works only in private mode only
@@ -163,11 +149,9 @@ SHORTENER_API_MESSAGE = """To add or update your Shortner Website API,
             
 Ex: `/shortener_api 9e6082cd457037f01be6631e803c60a1bab73a73`
 
-Current Website: {base_site}
+Shortener site: {base_site}
 
-To change your Shortener Website: /base_site
-
-Current Shortener API: `{shortener_api}`"""
+CURRENT DTGLINKS.IN API: `{shortener_api}`"""
 
 HEADER_MESSAGE = """📝 To set the header text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.
 
