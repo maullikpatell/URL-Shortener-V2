@@ -119,7 +119,7 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🔌 {base_site} API: {shortener_api}
+- 🔌 DTGLINKS.IN API: {shortener_api}
 
 - 📎 Username: @{username}
 
