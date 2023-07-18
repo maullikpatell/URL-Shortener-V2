@@ -178,7 +178,10 @@ async def create_inline_keyboard_markup(message: Message, method_func, user):
             buttons.append(row_buttons)
         return InlineKeyboardMarkup(buttons)
 
-
+async def mdisk_api_handler(user, text, alias=""):
+    api_key = user["mdisk_api"]
+    mdisk = Mdisk(api_key)
+    return await mdisk.convert_from_text(text)
 
 
 async def replace_link(user, text, alias=""):
