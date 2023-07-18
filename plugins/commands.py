@@ -68,6 +68,10 @@ async def start(c: Client, m: Message):
         return await m.reply_photo(
             photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP
         )
+        await message.reply_chat_action(enums.ChatAction.TYPING)
+        maz=await message.reply_sticker("CAACAgUAAxkBAAEJui5ktjAbmH5vB-X5yWOjOLW60ge2KgACSggAAhkRqVdAfAljVle-my8E")
+        await asyncio.sleep(2)
+        await maz.delete()
     await m.reply_text(
         t, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True
     )
