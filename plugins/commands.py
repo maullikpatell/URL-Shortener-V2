@@ -39,10 +39,6 @@ avl_web1 = "".join(f"- {i}\n" for i in avl_web)
 @Client.on_message(filters.command("start") & filters.private & filters.incoming)
 @private_use
 async def start(c: Client, m: Message):
-    await message.reply_chat_action(enums.ChatAction.TYPING)
-    maz=await message.reply_sticker("CAACAgUAAxkBAAEJui5ktjAbmH5vB-X5yWOjOLW60ge2KgACSggAAhkRqVdAfAljVle-my8E")
-    await asyncio.sleep(2)
-    await maz.delete()
     NEW_USER_REPLY_MARKUP = [
         [
             InlineKeyboardButton("Ban", callback_data=f"ban#{m.from_user.id}"),
