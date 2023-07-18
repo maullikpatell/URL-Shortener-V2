@@ -46,7 +46,9 @@ async def start(c: Client, m: Message):
         ]
     ]
     is_user = await is_user_exist(m.from_user.id)
-
+        ma=await message.reply_sticker("CAACAgUAAxkBAAEJui5ktjAbmH5vB-X5yWOjOLW60ge2KgACSggAAhkRqVdAfAljVle-my8E")
+        await asyncio.sleep(2)
+        await ma.delete()
     reply_markup = InlineKeyboardMarkup(NEW_USER_REPLY_MARKUP)
 
     if not is_user and LOG_CHANNEL:
