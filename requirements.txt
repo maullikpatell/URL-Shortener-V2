@@ -9,4 +9,4 @@ aiofiles
 validators
 python-dotenv
 uvloop
-https://github.com/Nisarg7021/shortzy1.zip
+https://github.com/Nisarg7021/shortzy.zip
