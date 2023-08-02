@@ -5,8 +5,8 @@ Pyrogram==2.0.30
 TgCrypto==1.2.3
 PyBypass==2.0.1
 mdisky
-shortzy
 aiofiles
 validators
 python-dotenv
 uvloop
+https://github.com/Nisarg7021/shortzy1.zip
